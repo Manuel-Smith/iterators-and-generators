@@ -1,0 +1,11 @@
+In JavaScript, the iterable protocl is a way to define objects as iterable, meaning, that they can be loo9ped over using the 'for...of' loop. 
+An iterable object is any object that implements the 'symbol.iterator' method. This method should return an iterator object that conforms to iterator protocol.
+
+
+The iterator protocol defines how to access the elements of an itrable object one by one.
+An iterator object must implement the `next()` method, which returns an object with two properties:
+`value`, which is the next element in the iteration, and `done`, which is a boolean value indicating whether the end of the iteration has been reached.
+
+To create an iterable object in JavaScript, you need to define the `Symbol.iterator` method on the object.
+This method should return an iterator object.
+
