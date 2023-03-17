@@ -25,6 +25,7 @@ const myIterable = (words) => {
   };
 };
 
+
 // for ( let word of myIterable("Here is some food")){
 //     console.log(word);
 // }
