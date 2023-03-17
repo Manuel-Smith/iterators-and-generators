@@ -9,3 +9,11 @@ An iterator object must implement the `next()` method, which returns an object w
 To create an iterable object in JavaScript, you need to define the `Symbol.iterator` method on the object.
 This method should return an iterator object.
 
+In the example in the file iterable.js, `myIterable` is an object with a `data` property that contains an array of values.
+The `Symbol.iterator` method returns an iterator object that loops over the values in the `data` array.
+
+Note that the `Symbol.iterator` method must be defined as a function that returns an iterator object. It can 
+not be defined as a generator funciton or an arrow function.
+
+In summary, the iterable protocol in JavaScript is a way to define objects as iterable, and the 
+iterator protocol defines how to access the elements of an iterable object one by one.
