@@ -31,3 +31,4 @@ while(!result.done){
     result = it.next();
 }
 console.log('Done');
+console.log(1 < 2 < 3);

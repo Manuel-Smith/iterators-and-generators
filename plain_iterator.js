@@ -20,8 +20,21 @@ let myIterator = (iterableWords) => {
 let counter = myIterator("Here I am now");
 
 let result = counter.next();
+console.log(result.value);
 
-while(!result.done){
-    console.log(result.value);
-    result = counter.next();
-}
+result = counter.next();
+console.count(result.value);
+
+result = counter.next();
+console.count(result.value);
+
+result = counter.next();
+console.count(result.value);
+
+result = counter.next();
+console.count(result.value);
+
+// while(!result.done){
+//     console.log(result.value);
+//     result = counter.next();
+// }
