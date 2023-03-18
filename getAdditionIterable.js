@@ -4,6 +4,7 @@ function getAdditionIterable(start = 0, end = Infinity, step = 1) {
   return {
     next() {
       let result = {};
+
       if (currentPosition < end) {
         result.value = currentPosition;
         result.done = false;
@@ -14,15 +15,13 @@ function getAdditionIterable(start = 0, end = Infinity, step = 1) {
       return result;
     },
   };
-
-  return next;
 }
 
-let iterator = getAdditionIterable(0, 5, 1);
+let iterator = getAdditionIterable(1, 5, 1);
+let result = iterator.next();
 
-let result = iterator.next()
-
-while(!result.done){
-    console.log(result.value);
-    result = iterator.next();
+while (!result.done) {
+  console.log(result.value);
+  result = iterator.next();
 }
+console.log("I am done");
