@@ -1,25 +1,28 @@
-function getAdditionIterable() {
-//   let currentPosition = start;
+function getAdditionIterable(start = 0, end = Infinity, step = 1) {
+  let currentPosition = start;
 
-//   let additionIterable = {
-//     next() {
-//       let result = {};
-//       if (currentPosition < end) {
-//         result.value = currentPosition;
-//         result.done = false;
+  return {
+    next() {
+      let result = {};
+      if (currentPosition < end) {
+        result.value = currentPosition;
+        result.done = false;
+        currentPosition += step;
+      } else {
+        result.done = true;
+      }
+      return result;
+    },
+  };
 
-//         currentPosition += step;
-//       } else {
-//         result.done = true;
-//       }
-
-//       return result;
-//     },
-//   };
-
-return true;
+  return next;
 }
 
+let iterator = getAdditionIterable(0, 5, 1);
 
+let result = iterator.next()
 
-getAdditionIterable();
+while(!result.done){
+    console.log(result.value);
+    result = iterator.next();
+}
