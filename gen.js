@@ -40,8 +40,12 @@ const person = {
 
 // Implementing same code using generators.
 
-person[Symbol.iterator] = function* () {
-  yield Object.keys(this);
-};
+// person[Symbol.iterator] = function* () {
+//   yield Object.keys(this);
+// };
 
-console.log(...person);
+// console.log(...person);
+
+for( const [key, value] of Object.entries(person)){
+    console.log(key, ': ', value);
+}
