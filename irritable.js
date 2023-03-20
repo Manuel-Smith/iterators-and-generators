@@ -1,8 +1,7 @@
 function iterator() {
-  let step = 0;
-
   return {
     [Symbol.iterator]() {
+      let step = 0;
       return {
         next() {
           step++;
