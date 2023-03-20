@@ -10,14 +10,12 @@ const counter = function* () {
 // Create the Generator Object
 const counterGenerator = counter();
 
-// let generator = counterGenerator.next();
-for (const count of counter()) {
-  console.log(count);
+let generator = counterGenerator.next();
+
+while (!generator.done) {
+  console.log(generator);
+  generator = counterGenerator.next();
 }
 
-// while(!generator.done){
-//     console.log(generator);
-//     generator = counterGenerator.next();
-// }
-
-// console.log('Done...');
+console.log(counterGenerator.next());
+console.log("Done...");
