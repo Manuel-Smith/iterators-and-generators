@@ -4,7 +4,7 @@ const counter = function* () {
   // Pause here and return the generator
   yield 1;
   yield 2;
-  yield 3;
+   yield 3;
 };
 
 // Create the Generator Object
