@@ -20,9 +20,8 @@ const asyncGeneratorFunction = async function* () {
 };
 
 const generatorInitializer = async () => {
-
+    
   let asyncGeneratorObject = asyncGeneratorFunction();
-  
   for await (const value of asyncGeneratorObject) {
     console.log(value);
   }
