@@ -38,13 +38,11 @@ const groceryList = function* (passedIndex) {
   let groceries = ["Avocado", "Cookie", "Milk", "Soup", "Soda"];
   let groceryListLength = groceries.length;
 
-  for(let i = 0; i < groceryListLength; i++){
+  for (let i = 0; i < groceryListLength; i++) {
     const randomIndex = Math.floor(Math.random() * groceries.length);
-    let removedGroceryItem = groceries.splice(randomIndex, 1)[0]
+    let removedGroceryItem = groceries.splice(randomIndex, 1)[0];
     yield `${passedIndex.next().value} ${removedGroceryItem}`;
-    
   }
-
 };
 
 let randomNumberGenerator = getRandomNumber();
